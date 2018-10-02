@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './kids.png';
 import './App.css';
+import { Comp1 } from './components/comp1';
 
 
 class App extends Component {
@@ -33,9 +34,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="App-header" >
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Itunes in React</h1>
+          <Comp1 />
         </header>
         <form>
           <input type="text" ref={input => this.input = input} placeholder="Search songs"></input>

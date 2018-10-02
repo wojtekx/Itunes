@@ -1,7 +1,11 @@
 import { Component } from 'react';
 import React from "react"
 
-class comp1 extends Component {
+class Comp1 extends Component {
+    constructor() {
+        super();
+        <div>a</div>
+    }
 
 }
-export { comp1 };
+export { Comp1 };
