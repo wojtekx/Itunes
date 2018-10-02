@@ -12,12 +12,12 @@ class App extends Component {
     };
   }
 
-  componentDidMonth() {
+  // componentDidMonth() {
+  // };
 
-  };
   submit = () => {
     console.log(this.input.value);
-  }
+  };
 
   getMusic = (el) => {
     el.preventDefault();
@@ -26,10 +26,9 @@ class App extends Component {
     }).then(r => r.json())
       .then(data => console.log(data.results) || this.setState({
         song: data.results,
-      }))
+      }));
+  };
 
-
-  }
 
   render() {
     return (
@@ -43,9 +42,7 @@ class App extends Component {
           <button onClick={this.getMusic} >Search</button>
         </form>
         <div id="songs">
-          {this.state.song.map(el => <div>{el.artistName}</div>)}
-          {this.state.song.map(el => <div>{el.trackName}</div>)}
-          {this.state.song.map(el => <img src={el.artworkUrl100}></img>)}
+          {this.state.song.map(el => <div><img src={el.artworkUrl100} />{el.artistName}{el.trackName}</div>)}
         </div>
       </div>
 
