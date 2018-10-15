@@ -1,13 +1,33 @@
-import { Component } from 'react';
 import React from "react"
 
-class List extends Component {
+
+
+class List extends React.Component {
+
     constructor() {
         super();
+        this.state = {
+            song: [{}],
+        };
     }
+
+    getMusic = (el) => {
+        el.preventDefault();
+        fetch(`https://itunes.apple.com/search?term=${this.props.val}&limit=6`, { method: 'GET', })
+            .then(r => r.json())
+            .then(data => console.log(data.results) || this.setState({
+                song: data.results,
+            }));
+    };
+
     render() {
+
         return (
-            <div>hello</div>
+            <div>
+                <div id="songs">
+                    {this.state.song.map(el => <div><img src={el.artworkUrl100} />{el.artistName}{el.trackName}</div>)}
+                </div>
+            </div>
         )
     }
 
