@@ -11,7 +11,6 @@ class ListLayout extends React.Component {
     };
 
     getMusic = (e, value) => {
-        console.log(value)
         this.setState({
             value: value
         })

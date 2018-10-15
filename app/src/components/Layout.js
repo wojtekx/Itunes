@@ -3,18 +3,15 @@ import './Header.css';
 import { ListLayout } from './ListLayout';
 
 
-class Layout extends React.Component {
+
+const Layout = () => (
+    <div>
+        <div>
+            <ListLayout />
+        </div>
+    </div>
+)
 
 
-    render() {
-        return (
-            <div>
-                <div>
-                    <ListLayout />
-                </div>
-            </div>
-        )
-    }
-}
 
 export { Layout };
