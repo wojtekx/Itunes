@@ -15,7 +15,7 @@ class List extends React.Component {
         el.preventDefault();
         fetch(`https://itunes.apple.com/search?term=${this.props.val}&limit=6`, { method: 'GET', })
             .then(r => r.json())
-            .then(data => console.log(data.results) || this.setState({
+            .then(data => this.setState({
                 song: data.results,
             }));
     };

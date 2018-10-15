@@ -18,7 +18,7 @@ class ListLayout extends React.Component {
         e.preventDefault();
         fetch(`https://itunes.apple.com/search?term=${value}&limit=6`, { method: 'GET', })
             .then(r => r.json())
-            .then(data => console.log(data.results) || this.setState({
+            .then(data => this.setState({
                 songs: data.results,
             }));
     };
@@ -26,7 +26,7 @@ class ListLayout extends React.Component {
     getPaginatedMusic = (limit) => {
         fetch(`https://itunes.apple.com/search?term=${this.state.value}&limit=${limit}`, { method: 'GET', })
             .then(r => r.json())
-            .then(data => console.log(data.results) || this.setState({
+            .then(data => this.setState({
                 songs: data.results.slice(data.results.length - 6, data.results.length),
             }));
     };
