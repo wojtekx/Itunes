@@ -1,5 +1,6 @@
 import React from 'react';
-import { Layout } from './components/Layout';
+import './App.scss'
+import { Layout } from './components/Layout/Layout';
 
 class App extends React.Component {
 
@@ -10,7 +11,6 @@ class App extends React.Component {
       <div className="App">
         <Layout />
       </div>
-
     );
   }
 }
