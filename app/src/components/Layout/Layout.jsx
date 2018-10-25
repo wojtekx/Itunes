@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Header/Header.css';
+import '../Header/Header.scss';
 import { ListLayout } from '../ListLayout/ListLayout';
 
 const Layout = () => (

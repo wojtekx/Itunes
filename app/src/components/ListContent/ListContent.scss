@@ -1,0 +1,27 @@
+$flexLine: inline-flex;
+
+.container{
+    width: 60vw;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+.content{
+    display: $flexLine;
+    width: 250px;
+    padding: 10px;
+    box-shadow: 0 0 3px 3px red;
+    margin: 5px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    margin:0 15px;
+    width: 350px;
+    height: 120px;
+}
+.text h5{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    width: 100px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Form.scss'
 
 class Form extends React.Component {
 
@@ -11,9 +12,9 @@ class Form extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={e => this.props.getMusic(e, this.state.value)}>
+                <form onChange={e => this.props.getMusic(e, this.state.value)}>
                     <input type="text" placeholder="Search songs" onChange={e => this.setState({ value: e.target.value })} />
-                    <button type="submit">Search</button>
+
                 </form>
             </div >
         )
